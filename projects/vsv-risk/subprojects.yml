@@ -1,0 +1,12 @@
+# registry locates canonical repositories
+project_id: vsv-risk
+
+subprojects:
+  - subproject_id: vsv-ca-2023
+    repository: geoepi/vsv-2023
+    
+  - subproject_id: seir-vector
+    repository: geoepi/seir-vector
+    
+  - subproject_id: vs-epizootics
+    repository: geoepi/vs-epizootics

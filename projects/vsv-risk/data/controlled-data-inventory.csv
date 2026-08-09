@@ -1,0 +1,2 @@
+data_id,name,description,provider,steward,authoritative_location,access,restriction_or_agreement,subprojects,status,notes
+example-surveillance-001,Example surveillance data,Replace with a short description,Provider name,Project steward,Approved storage path or system,restricted,Agreement or limitation,subproject-id,active,Replace this example row
