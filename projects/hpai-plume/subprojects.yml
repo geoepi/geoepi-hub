@@ -1,0 +1,6 @@
+# registry locates canonical repositories
+project_id: hpai-plume
+
+subprojects:
+  - subproject_id: EpiPlume
+    repository: geoepi/EpiPlume
