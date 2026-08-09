@@ -5,7 +5,7 @@ subprojects:
   - subproject_id: fmd-challengeabm
     repository: geoepi/challengeABM
     
-  - subproject_id: fmd-sequence-map
+  - subproject_id: sequence-map
     repository: geoepi/sequence-map
     
   - subproject_id: incubation-stenfeldt
