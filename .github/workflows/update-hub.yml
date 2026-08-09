@@ -1,0 +1,72 @@
+name: Update GeoEpi Hub
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - "projects/*/subprojects.yml"
+      - "scripts/update_hub.py"
+
+  schedule:
+    - cron: "15 7 * * 1"
+      timezone: "America/Chicago"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: geoepi-hub-update
+  cancel-in-progress: false
+
+jobs:
+  update-hub:
+    name: Refresh subproject status
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Hub
+        uses: actions/checkout@v6
+
+      - name: Create cross-repository read token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.GEOEPI_HUB_APP_CLIENT_ID }}
+          private-key: ${{ secrets.GEOEPI_HUB_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          permission-contents: read
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install YAML parser
+        run: |
+          python -m pip install --disable-pip-version-check "PyYAML>=6,<7"
+
+      - name: Build and validate Hub status
+        env:
+          GH_READ_TOKEN: ${{ steps.app-token.outputs.token }}
+          STALE_DAYS: "45"
+        run: |
+          python scripts/update_hub.py
+
+      - name: Commit generated changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add generated/
+
+          if git diff --cached --quiet; then
+            echo "No Hub status changes."
+            exit 0
+          fi
+
+          git commit -m "chore(hub): refresh subproject status"
+          git push
