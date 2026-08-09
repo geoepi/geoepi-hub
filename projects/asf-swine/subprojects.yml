@@ -1,0 +1,9 @@
+# registry locates canonical repositories
+project_id: asf-swine
+
+subprojects:
+  - subproject_id: asf-swine-contacts
+    repository: geoepi/swine-contacts
+    
+  - subproject_id: asf-swine-missouri
+    repository: geoepi/FeralSwine_Ben
