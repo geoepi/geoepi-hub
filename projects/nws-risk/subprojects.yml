@@ -7,3 +7,12 @@ subprojects:
 
   - subproject_id: nws-cds-datagrab
     repository: geoepi/cds-datagrab
+    
+  - subproject_id: nws-nwscrewworm
+    repository: geoepi/NWScrewworm
+    
+  - subproject_id: nws-ca-env
+    repository: geoepi/hominivorax-CA
+    
+  - subproject_id: nws-dashboard-pipeline
+    repository: geoepi/nws-postprocessing

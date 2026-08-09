@@ -5,7 +5,7 @@
 - **Project ID: nws-risk**
 - **Project title: NWS Risk and Operational Decision Assessment**
 - **Short objective: Build automated tools to assess NWS risk and support APHIS operational decision making.**
-- **Project lead: Cohnstaedt, Humphreys**
+- **Project lead: Cohnstaedt, Humphreys, Hudson, Boudreau**
 - **Collaborators and partners: APHIS NWS Directorate**
 - **Status: active**
 
