@@ -2,5 +2,5 @@
 project_id: hpai-plume
 
 subprojects:
-  - subproject_id: EpiPlume
+  - subproject_id: epiplume
     repository: geoepi/EpiPlume
