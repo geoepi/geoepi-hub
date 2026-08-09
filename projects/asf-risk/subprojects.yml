@@ -1,0 +1,6 @@
+# registry locates canonical repositories
+project_id: asf-risk
+
+subprojects:
+  - subproject_id: asf-gbrts
+    repository: geoepi/ASF-GBRTs
