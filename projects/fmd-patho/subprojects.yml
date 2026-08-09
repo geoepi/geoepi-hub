@@ -8,7 +8,7 @@ subprojects:
   - subproject_id: fmd-sequence-map
     repository: geoepi/sequence-map
     
-  - subproject_id: fmd-incubation-stenfeldt
+  - subproject_id: incubation-stenfeldt
     repository: geoepi/fmdv-preclinical
     
   - subproject_id: pak-coinfection
