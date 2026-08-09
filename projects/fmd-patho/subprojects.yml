@@ -1,0 +1,15 @@
+# registry locates canonical repositories
+project_id: fmd-patho
+
+subprojects:
+  - subproject_id: fmd-challengeabm
+    repository: geoepi/challengeABM
+    
+  - subproject_id: fmd-sequence-map
+    repository: geoepi/sequence-map
+    
+  - subproject_id: fmd-incubation-stenfeldt
+    repository: geoepi/fmdv-preclinical
+    
+  - subproject_id: pak-coinfection
+    repository: geoepi/pak-coinfection
