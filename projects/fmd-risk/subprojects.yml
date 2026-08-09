@@ -1,0 +1,9 @@
+# registry locates canonical repositories
+project_id: fmd-risk
+
+subprojects:
+  - subproject_id: fmd-preclinical-spread
+    repository: geoepi/FMD-preclinical-spread
+    
+  - subproject_id: fmd-sri-lanka
+    repository: geoepi/sri-lanka-fmd
