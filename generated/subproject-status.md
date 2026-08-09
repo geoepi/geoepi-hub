@@ -6,6 +6,7 @@ Metadata are flagged as stale after 45 days without a change.
 
 | Project | Subproject | Status | Lead | Current focus | Compute | Next milestone | Metadata | Repository |
 |---|---|---|---|---|---|---|---|---|
+| asf-risk | asf-gbrts | paused | Madion Berger (@MadisonB14) | Manuscript in review. Modifications pending reviewer comments. | Atlas | Pending reviewer comments (2025-10-01) | 2026-08-09 | [geoepi/ASF-GBRTs](https://github.com/geoepi/ASF-GBRTs) |
 | hpai-plume | epiplume | active | John Humphreys (@JMHumphreys) | Developing workflow for parallel processing of facility-to-facility plume simulations. | Atlas | Parallel processing workflow (2026-09-01) | 2026-08-09 | [geoepi/EpiPlume](https://github.com/geoepi/EpiPlume) |
 | nws-risk | nws-bayes-geostat | active | John Humphreys (@JMHumphreys) | Prospective validation | Atlas | Update all inputs (2026-09-01) | 2026-08-08 | [geoepi/hominivorax-geostat](https://github.com/geoepi/hominivorax-geostat) |
 | nws-risk | nws-ca-env | active | John Humphreys (@JMHumphreys) | Used as framework for new CA model inclusive of population dynamics.  Will be packaged. | Atlas | Refactor as package (2026-12-01) | 2026-08-09 | [geoepi/hominivorax-CA](https://github.com/geoepi/hominivorax-CA) |
