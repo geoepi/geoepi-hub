@@ -1,0 +1,9 @@
+# registry locates canonical repositories
+project_id: wnv-risk
+
+subprojects:
+  - subproject_id: wnv-ai-gnn
+    repository: geoepi/SpatioTemporal-GNN-Regressor
+    
+  - subproject_id: wnv-geoai-flavi
+    repository: geoepi/GeoAI-Flavivirus
