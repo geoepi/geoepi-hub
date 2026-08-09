@@ -1,3 +1,4 @@
 project_id,subproject_id,title,repository,lead_name,lead_github,status,current_focus,compute,next_milestone,milestone_target,milestone_overdue,metadata_last_updated,metadata_stale
+hpai-plume,epiplume,Atmospheric Dispersion of HPAI,geoepi/EpiPlume,John Humphreys,JMHumphreys,active,Developing workflow for parallel processing of facility-to-facility plume simulations.,Atlas,Parallel processing workflow,2026-09-01,False,2026-08-09,False
 nws-risk,nws-bayes-geostat,Bayesian NWS Geostatistical Model,geoepi/hominivorax-geostat,John Humphreys,JMHumphreys,active,Prospective validation,Atlas,Update all inputs,2026-09-01,False,2026-08-08,False
 nws-risk,nws-cds-datagrab,Pipeline for CDS Data Processing,geoepi/cds-datagrab,John Humphreys,JMHumphreys,active,Adding additional variables,Atlas,Add additional variables,2026-09-01,False,2026-08-08,False
