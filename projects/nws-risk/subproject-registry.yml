@@ -1,9 +1,9 @@
-# The registry locates canonical repositories; it does not duplicate subproject state.
+# registry locates canonical repositories
 project_id: nws-risk
 
 subprojects:
-  - subproject_id: nws-bayes-risk
-    repository: geoepi/nws-bayes-risk
+  - subproject_id: nws-bayes-geostat
+    repository: geoepi/hominivorax-geostat
 
-  - subproject_id: nws-genomics
-    repository: username/nws-genomics
+  - subproject_id: nws-cds-datagrab
+    repository: geoepi/cds-datagrab
