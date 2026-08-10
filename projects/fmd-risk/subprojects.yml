@@ -7,3 +7,6 @@ subprojects:
     
   - subproject_id: fmd-sri-lanka
     repository: geoepi/sri-lanka-fmd
+
+  - subproject_id: fmd-vietnam
+    repository: geoepi/fmd-vietnam
