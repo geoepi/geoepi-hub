@@ -4,3 +4,6 @@ project_id: hpai-plume
 subprojects:
   - subproject_id: epiplume
     repository: geoepi/EpiPlume
+
+  - subproject_id: hpai-lauren
+    repository: geoepi/hpai-lauren
