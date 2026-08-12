@@ -620,11 +620,30 @@ def write_step_summary(outputs, errors):
 
 
 def parse_args(argv=None):
-    parser = argparse.ArgumentParser(description="Validate and generate GeoEpi Hub status")
-    parser.add_argument(
+    parser = argparse.ArgumentParser(
+        description=(
+            "Validate and generate GeoEpi Hub status. "
+            "Use --validate-local for credential-free PR checks, "
+            "--validate-only for complete live validation without writing, "
+            "or no flag for live validation and generation."
+        )
+    )
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--validate-local",
+        action="store_true",
+        help=(
+            "validate local Hub registries only; no network, credentials, "
+            "remote metadata, or generated-file writes"
+        ),
+    )
+    mode.add_argument(
         "--validate-only",
         action="store_true",
-        help="validate registries, remote metadata, and report generation without writing files",
+        help=(
+            "perform complete live remote validation and report generation "
+            "without writing generated files"
+        ),
     )
     return parser.parse_args(argv)
 
@@ -632,6 +651,15 @@ def parse_args(argv=None):
 def main(argv=None):
     args = parse_args(argv)
     entries, errors = load_registries()
+
+    if args.validate_local:
+        if errors:
+            print_validation_errors(errors)
+            return 1
+        print(f"Validated {len(entries)} registered subproject entries locally.")
+        print("Local Hub validation passed.")
+        return 0
+
     rows = []
     if not errors:
         rows, remote_errors = collect_rows(entries)
@@ -652,6 +680,12 @@ def main(argv=None):
         for path in write_outputs(outputs):
             print(f"Wrote {path}")
     return 0
+
+
+def print_validation_errors(errors):
+    print("\nHub validation failed:", file=sys.stderr)
+    for error in errors:
+        print(f"  - {error}", file=sys.stderr)
 
 
 if __name__ == "__main__":

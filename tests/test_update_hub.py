@@ -1,8 +1,10 @@
 import importlib.util
+import os
 import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
+from unittest import mock
 
 
 SCRIPT = Path(__file__).parents[1] / "scripts" / "update_hub.py"
@@ -165,6 +167,68 @@ subprojects:
             }
         )
         self.assertTrue(any("incompatible identities" in e for e in errors))
+
+
+class LocalValidationModeTests(unittest.TestCase):
+    REGISTRY = """project_id: hpai-plume
+subprojects:
+  - subproject_id: epiplume
+    repository: geoepi/EpiPlume
+"""
+
+    def run_local(self, registry=None, generated_contents=None):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            project = root / "projects" / "hpai-plume"
+            project.mkdir(parents=True)
+            (project / "subprojects.yml").write_text(
+                registry or self.REGISTRY, encoding="utf-8"
+            )
+            generated = root / "generated"
+            generated.mkdir()
+            (generated / "sentinel.txt").write_text(
+                generated_contents or "unchanged", encoding="utf-8"
+            )
+            before = {
+                path.relative_to(root): path.read_bytes()
+                for path in root.rglob("*")
+                if path.is_file()
+            }
+            original_cwd = os.getcwd()
+            os.chdir(root)
+            try:
+                with mock.patch.object(hub, "github_get", side_effect=AssertionError("network call")) as github_get, mock.patch.object(hub, "read_remote_yaml", side_effect=AssertionError("remote metadata call")) as read_remote_yaml, mock.patch.object(hub, "metadata_commit_date", side_effect=AssertionError("commit history call")) as metadata_commit_date:
+                    result = hub.main(["--validate-local"])
+            finally:
+                os.chdir(original_cwd)
+            after = {
+                path.relative_to(root): path.read_bytes()
+                for path in root.rglob("*")
+                if path.is_file()
+            }
+            return result, before, after, github_get, read_remote_yaml, metadata_commit_date
+
+    def test_valid_local_registry_passes_without_remote_access(self):
+        result, before, after, github_get, read_remote_yaml, metadata_commit_date = self.run_local()
+        self.assertEqual(result, 0)
+        github_get.assert_not_called()
+        read_remote_yaml.assert_not_called()
+        metadata_commit_date.assert_not_called()
+        self.assertEqual(before, after)
+
+    def test_local_mode_rejects_uppercase_identifier(self):
+        result, *_ = self.run_local(self.REGISTRY.replace("epiplume", "EpiPlume"))
+        self.assertNotEqual(result, 0)
+
+    def test_local_mode_rejects_duplicate_identifier(self):
+        registry = self.REGISTRY + "  - subproject_id: epiplume\n    repository: geoepi/Other\n"
+        result, *_ = self.run_local(registry)
+        self.assertNotEqual(result, 0)
+
+    def test_local_mode_does_not_write_generated_files(self):
+        result, before, after, *_ = self.run_local(generated_contents="production snapshot")
+        self.assertEqual(result, 0)
+        self.assertEqual(before, after)
 
 
 class DateAndStatusTests(unittest.TestCase):

@@ -17,21 +17,12 @@ concurrency:
 
 jobs:
   validate-hub:
-    name: Validate registries and metadata
+    name: Validate Hub structure
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out Hub pull request
         uses: actions/checkout@v6
-
-      - name: Create cross-repository read token
-        id: app-token
-        uses: actions/create-github-app-token@v3
-        with:
-          client-id: ${{ vars.GEOEPI_HUB_APP_CLIENT_ID }}
-          private-key: ${{ secrets.GEOEPI_HUB_APP_PRIVATE_KEY }}
-          owner: ${{ github.repository_owner }}
-          permission-contents: read
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -46,17 +37,14 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
 
-      - name: Validate Hub without writing generated files
-        env:
-          GH_READ_TOKEN: ${{ steps.app-token.outputs.token }}
-          STALE_DAYS: "45"
+      - name: Validate Hub registries locally
         run: |
-          python scripts/update_hub.py --validate-only
+          python scripts/update_hub.py --validate-local
 
       - name: Confirm generated files were not modified
         run: |
           if [[ -n "$(git status --porcelain -- generated/)" ]]; then
             git status --short -- generated/
-            echo "Validation unexpectedly modified generated files."
+            echo "Local validation unexpectedly modified generated files."
             exit 1
           fi

@@ -158,6 +158,8 @@ The synchronization follows a simple rule:
 
 > **Synchronize project state, not project content.**
 
+Pull requests receive local structural validation without cross-repository credentials; the trusted Hub synchronization workflow performs live `.geoepi.yml` validation after merge and on scheduled or manual refreshes.
+
 Detailed code, model parameters, environments, run records, SLURM jobs,
 analytical provenance, validation results, and scientific outputs remain with
 the subproject rather than being copied into the Hub.
