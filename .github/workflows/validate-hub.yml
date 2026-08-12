@@ -1,0 +1,50 @@
+name: Validate GeoEpi Hub
+
+on:
+  pull_request:
+    paths:
+      - "projects/**"
+      - "scripts/update_hub.py"
+      - "tests/**"
+      - ".github/workflows/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: geoepi-hub-validation-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate-hub:
+    name: Validate Hub structure
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Hub pull request
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install YAML parser
+        run: |
+          python -m pip install --disable-pip-version-check "PyYAML>=6,<7"
+
+      - name: Run Python tests
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Validate Hub registries locally
+        run: |
+          python scripts/update_hub.py --validate-local
+
+      - name: Confirm generated files were not modified
+        run: |
+          if [[ -n "$(git status --porcelain -- generated/)" ]]; then
+            git status --short -- generated/
+            echo "Local validation unexpectedly modified generated files."
+            exit 1
+          fi

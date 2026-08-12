@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   update-hub:
-    name: Refresh subproject status
+    name: Refresh portfolio status
     runs-on: ubuntu-latest
 
     steps:
@@ -48,7 +48,7 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check "PyYAML>=6,<7"
 
-      - name: Build and validate Hub status
+      - name: Build and validate Hub portfolio
         env:
           GH_READ_TOKEN: ${{ steps.app-token.outputs.token }}
           STALE_DAYS: "45"
@@ -68,5 +68,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore(hub): refresh subproject status"
+          git commit -m "chore(hub): refresh portfolio status"
           git push
