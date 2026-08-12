@@ -7,3 +7,6 @@ subprojects:
 
   - subproject_id: hpai-lauren
     repository: geoepi/hpai-lauren
+    
+  - subproject_id: bcapture
+    repository: geoepi/bcapture
