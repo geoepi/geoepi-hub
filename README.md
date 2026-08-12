@@ -24,7 +24,7 @@ research computing infrastructure.
 
 ```mermaid
 flowchart TD
-    H["🌐 GeoEpi Hub<br/>Lab portfolio & project context"]
+    H["🌐 GeoEpi Hub portfolio & project context"]
 
     H --> P1["📁 Project"]
     H --> P2["📁 Project"]
