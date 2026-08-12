@@ -1,33 +1,27 @@
-name: Update GeoEpi Hub
+name: Validate GeoEpi Hub
 
 on:
-  workflow_dispatch:
-
-  push:
-    branches:
-      - main
+  pull_request:
     paths:
-      - "projects/*/subprojects.yml"
+      - "projects/**"
       - "scripts/update_hub.py"
-
-  schedule:
-    - cron: "15 7 * * 1"
-      timezone: "America/Chicago"
+      - "tests/**"
+      - ".github/workflows/**"
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: geoepi-hub-update
-  cancel-in-progress: false
+  group: geoepi-hub-validation-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 jobs:
-  update-hub:
-    name: Refresh portfolio status
+  validate-hub:
+    name: Validate registries and metadata
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out Hub
+      - name: Check out Hub pull request
         uses: actions/checkout@v6
 
       - name: Create cross-repository read token
@@ -48,25 +42,21 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check "PyYAML>=6,<7"
 
-      - name: Build and validate Hub portfolio
+      - name: Run Python tests
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Validate Hub without writing generated files
         env:
           GH_READ_TOKEN: ${{ steps.app-token.outputs.token }}
           STALE_DAYS: "45"
         run: |
-          python scripts/update_hub.py
+          python scripts/update_hub.py --validate-only
 
-      - name: Commit generated changes
+      - name: Confirm generated files were not modified
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add generated/
-
-          if git diff --cached --quiet; then
-            echo "No Hub status changes."
-            exit 0
+          if [[ -n "$(git status --porcelain -- generated/)" ]]; then
+            git status --short -- generated/
+            echo "Validation unexpectedly modified generated files."
+            exit 1
           fi
-
-          git commit -m "chore(hub): refresh portfolio status"
-          git push

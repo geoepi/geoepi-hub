@@ -115,6 +115,8 @@ available in the **GeoEpi Lab Book**:
 
 **[Projects and Subprojects →](https://geoepi.github.io/geoepi-notebook/organization/projects-and-subprojects.html)**
 
+To register new work, follow **[Add a Project or Subproject →](https://geoepi.github.io/geoepi-notebook/organization/add-project-or-subproject.html)**.
+
 Additional repository guidance is available here:
 
 **[Canonical Repositories →](https://geoepi.github.io/geoepi-notebook/organization/repositories.html)**
@@ -144,6 +146,11 @@ generated/
 
 are created automatically by GitHub Actions and provide a current cross-project
 view of GeoEpi subprojects.
+
+- [Portfolio summary](generated/portfolio-summary.md) — high-level portfolio view
+- [Attention needed](generated/attention-needed.md) — exceptions and action items
+- [Detailed subproject status](generated/subproject-status.md) — complete human-readable portfolio
+- [Machine-readable status](generated/subproject-status.csv) — CSV equivalent of the detailed portfolio
 
 **Do not manually edit generated files.**
 
@@ -186,7 +193,9 @@ See the GeoEpi Lab Book for the group's
 
 Project entries are maintained under [`projects/`](projects/).
 
-The generated portfolio summary is available under [`generated/`](generated/).
+The generated [portfolio summary](generated/portfolio-summary.md) and
+[attention-needed report](generated/attention-needed.md) provide the current
+management views.
 
 ---
 
