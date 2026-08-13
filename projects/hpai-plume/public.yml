@@ -1,0 +1,24 @@
+# Public website narrative for this Hub project. See templates/public-project-template.yml.
+schema_version: 1
+project_id: hpai-plume
+publish: true
+content_status: scaffold
+title: Atmospheric Dispersion of HPAI
+short_summary: >
+  Retrospective analysis of atmospheric HPAI transport between poultry facilities.
+abstract: >
+  This GeoEpi project brings together retrospective analysis of atmospheric
+  HPAI transport between poultry facilities. Registered work includes an
+  atmospheric dispersion project, HPAI visualization and analyses, and tools
+  for the Biosecurity Compliance Audit Program.
+themes:
+  - geography
+  - epidemiology
+keywords:
+  - HPAI
+  - atmospheric dispersion
+  - poultry facilities
+  - transport
+featured: false
+image: null
+links: []

@@ -1,0 +1,22 @@
+# Public website narrative for this Hub project. See templates/public-project-template.yml.
+schema_version: 1
+project_id: asf-risk
+publish: true
+content_status: scaffold
+title: African Swine Fever Risk
+short_summary: >
+  Model-based analyses for African Swine Fever risk assessment.
+abstract: >
+  This GeoEpi project brings together work on model-based analyses for African
+  Swine Fever risk assessment. The project currently includes registered
+  analytical work under the ASF-GBRTs subproject.
+themes:
+  - epidemiology
+  - modeling
+keywords:
+  - African Swine Fever
+  - risk assessment
+  - modeling
+featured: false
+image: null
+links: []

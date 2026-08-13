@@ -17,6 +17,11 @@ from urllib.request import Request, urlopen
 
 import yaml
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+import public_content
+
 
 API = os.environ.get("GITHUB_API_URL", "https://api.github.com").rstrip("/")
 STALE_DAYS = int(os.environ.get("STALE_DAYS", "45"))
@@ -315,6 +320,7 @@ def build_row(entry, metadata, changed, today=None, stale_days=STALE_DAYS):
         "project_id": entry["project_id"],
         "subproject_id": entry["subproject_id"],
         "title": metadata.get("title", ""),
+        "summary": metadata.get("summary", ""),
         "repository": entry["repository"],
         "lead_name": lead.get("name", ""),
         "lead_github": lead.get("github", ""),
@@ -586,13 +592,18 @@ def build_attention_needed(rows, stale_days=STALE_DAYS):
     return "\n".join(lines)
 
 
-def build_outputs(rows, today=None, stale_days=STALE_DAYS):
-    return {
+def build_outputs(rows, today=None, stale_days=STALE_DAYS, public_records=None):
+    outputs = {
         "subproject-status.csv": build_status_csv(rows),
         "subproject-status.md": build_status_markdown(rows, stale_days),
         "portfolio-summary.md": build_portfolio_summary(rows, today, stale_days),
         "attention-needed.md": build_attention_needed(rows, stale_days),
     }
+    if public_records is not None:
+        feed = public_content.build_public_research_feed(public_records, rows)
+        outputs["public-research.json"] = public_content.build_public_research_json(feed)
+        outputs["public-research.md"] = public_content.build_public_research_markdown(feed)
+    return outputs
 
 
 def write_outputs(outputs, generated=Path("generated")):
@@ -651,6 +662,8 @@ def parse_args(argv=None):
 def main(argv=None):
     args = parse_args(argv)
     entries, errors = load_registries()
+    public_records, public_errors = public_content.load_public_records()
+    errors.extend(public_errors)
 
     if args.validate_local:
         if errors:
@@ -665,7 +678,7 @@ def main(argv=None):
         rows, remote_errors = collect_rows(entries)
         errors.extend(remote_errors)
 
-    outputs = build_outputs(rows) if not errors else {}
+    outputs = build_outputs(rows, public_records=public_records) if not errors else {}
     write_step_summary(outputs, errors)
     if errors:
         print("\nHub validation failed:", file=sys.stderr)
