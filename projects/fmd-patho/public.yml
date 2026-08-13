@@ -1,0 +1,23 @@
+# Public website narrative for this Hub project. See templates/public-project-template.yml.
+schema_version: 1
+project_id: fmd-patho
+publish: true
+content_status: scaffold
+title: Patho-epidemiological Analyses of Foot-and-mouth Disease.
+short_summary: >
+  Studies incorporating FMD genomics, within-host dynamics, or animal experiment results.
+abstract: >
+  This GeoEpi project brings together studies incorporating foot-and-mouth
+  disease genomics, within-host dynamics, or animal experiment results.
+  Registered work includes an agent-based disease transmission model, sequence
+  mapping, incubation-phase transmission, and FMDV co-infection and recombination.
+themes:
+  - epidemiology
+keywords:
+  - foot-and-mouth disease
+  - genomics
+  - within-host dynamics
+  - animal experiments
+featured: false
+image: null
+links: []

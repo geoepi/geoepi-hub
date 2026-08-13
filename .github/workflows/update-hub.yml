@@ -8,7 +8,9 @@ on:
       - main
     paths:
       - "projects/*/subprojects.yml"
+      - "projects/*/public.yml"
       - "scripts/update_hub.py"
+      - "scripts/public_content.py"
 
   schedule:
     - cron: "15 7 * * 1"

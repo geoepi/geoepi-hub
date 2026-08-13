@@ -1,0 +1,24 @@
+# Public website narrative for this Hub project. See templates/public-project-template.yml.
+schema_version: 1
+project_id: wnv-risk
+publish: true
+content_status: scaffold
+title: West Nile Virus Risk Assessments for Livestock
+short_summary: >
+  Models and analyses examining WNV risk to U.S. livestock.
+abstract: >
+  This GeoEpi project brings together models and analyses examining West Nile
+  virus risk to U.S. livestock. Registered work includes a graph neural network
+  project and a GeoAI flavivirus sandbox.
+themes:
+  - epidemiology
+  - modeling
+keywords:
+  - West Nile virus
+  - livestock
+  - risk assessment
+  - graph neural networks
+  - GeoAI
+featured: false
+image: null
+links: []

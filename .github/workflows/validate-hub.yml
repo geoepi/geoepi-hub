@@ -5,6 +5,8 @@ on:
     paths:
       - "projects/**"
       - "scripts/update_hub.py"
+      - "scripts/public_content.py"
+      - "templates/public-project-template.yml"
       - "tests/**"
       - ".github/workflows/**"
 

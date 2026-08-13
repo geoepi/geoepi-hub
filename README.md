@@ -158,6 +158,25 @@ The synchronization follows a simple rule:
 
 > **Synchronize project state, not project content.**
 
+## Public research records
+
+Each project may also contain an optional `public.yml` record. This file
+controls the curated public research narrative consumed by the GeoEpi website;
+it is separate from `.geoepi.yml` Version 1, which remains portfolio-state
+metadata. Website research pages are generated from these records rather than
+copied and maintained manually in the website repository.
+
+Records with `publish: false` remain in the Hub without appearing in the public
+feed. New or automatically drafted records should use `content_status: scaffold`
+until a project scientist reviews the wording. A reviewed record may use
+`content_status: reviewed`.
+
+The generated public feed is written to
+[`generated/public-research.json`](generated/public-research.json), with a
+human-readable inspection view in
+[`generated/public-research.md`](generated/public-research.md). Do not edit
+generated files directly.
+
 Pull requests receive local structural validation without cross-repository credentials; the trusted Hub synchronization workflow performs live `.geoepi.yml` validation after merge and on scheduled or manual refreshes.
 
 Detailed code, model parameters, environments, run records, SLURM jobs,

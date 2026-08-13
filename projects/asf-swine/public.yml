@@ -1,0 +1,25 @@
+# Public website narrative for this Hub project. See templates/public-project-template.yml.
+schema_version: 1
+project_id: asf-swine
+publish: true
+content_status: scaffold
+title: African Swine Fever Transmission by Feral Swine
+short_summary: >
+  Movement and genomic studies of ASF in feral swine.
+abstract: >
+  This GeoEpi project brings together movement and genomic studies of African
+  Swine Fever in feral swine. Registered project work includes studies of swine
+  movement and social cohesion and simulation of feral swine pedigrees based on
+  admixture analysis.
+themes:
+  - geography
+  - epidemiology
+  - ecology
+keywords:
+  - African Swine Fever
+  - feral swine
+  - movement
+  - genomics
+featured: false
+image: null
+links: []

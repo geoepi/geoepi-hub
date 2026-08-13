@@ -1,0 +1,25 @@
+# Public website narrative for this Hub project. See templates/public-project-template.yml.
+schema_version: 1
+project_id: fmd-risk
+publish: true
+content_status: scaffold
+title: Foot-and-mouth Disease Risk Assessments
+short_summary: >
+  Foot-and-mouth spread dynamics, transmission, and simulated response analyses.
+abstract: >
+  This GeoEpi project brings together work on foot-and-mouth disease spread
+  dynamics, transmission, and simulated response analyses. Registered work
+  includes preclinical spread, control-zone design in Sri Lanka, and endemic
+  foot-and-mouth disease analyses for Vietnam.
+themes:
+  - geography
+  - epidemiology
+  - modeling
+keywords:
+  - foot-and-mouth disease
+  - spread dynamics
+  - transmission
+  - simulated response
+featured: false
+image: null
+links: []

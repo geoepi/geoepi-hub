@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "source": "geoepi/geoepi-hub",
+  "projects": [
+    {
+      "project_id": "asf-risk",
+      "title": "African Swine Fever Risk",
+      "short_summary": "Model-based analyses for African Swine Fever risk assessment.",
+      "abstract": "This GeoEpi project brings together work on model-based analyses for African Swine Fever risk assessment. The project currently includes registered analytical work under the ASF-GBRTs subproject.",
+      "content_status": "scaffold",
+      "themes": [
+        "epidemiology",
+        "modeling"
+      ],
+      "keywords": [
+        "African Swine Fever",
+        "risk assessment",
+        "modeling"
+      ],
+      "featured": false,
+      "image": null,
+      "links": [],
+      "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/asf-risk",
+      "subprojects": [
+        {
+          "subproject_id": "asf-gbrts",
+          "title": "Sensitivity to Epidemiological Traits of ASF Strains",
+          "summary": "",
+          "repository": "geoepi/ASF-GBRTs",
+          "repository_url": "https://github.com/geoepi/ASF-GBRTs",
+          "status": "paused"
+        }
+      ]
+    },
+    {
+      "project_id": "asf-swine",
+      "title": "African Swine Fever Transmission by Feral Swine",
+      "short_summary": "Movement and genomic studies of ASF in feral swine.",
+      "abstract": "This GeoEpi project brings together movement and genomic studies of African Swine Fever in feral swine. Registered project work includes studies of swine movement and social cohesion and simulation of feral swine pedigrees based on admixture analysis.",
+      "content_status": "scaffold",
+      "themes": [
+        "geography",
+        "epidemiology",
+        "ecology"
+      ],
+      "keywords": [
+        "African Swine Fever",
+        "feral swine",
+        "movement",
+        "genomics"
+      ],
+      "featured": false,
+      "image": null,
+      "links": [],
+      "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/asf-swine",
+      "subprojects": [
+        {
+          "subproject_id": "asf-swine-contacts",
+          "title": "Swine Movement and Social Cohesion",
+          "summary": "",
+          "repository": "geoepi/swine-contacts",
+          "repository_url": "https://github.com/geoepi/swine-contacts",
+          "status": "paused"
+        },
+        {
+          "subproject_id": "asf-swine-missouri",
+          "title": "Simulation of feral swine pedigrees based on admixture analysis",
+          "summary": "",
+          "repository": "geoepi/FeralSwine_Ben",
+          "repository_url": "https://github.com/geoepi/FeralSwine_Ben",
+          "status": "archived"
+        }
+      ]
+    },
+    {
+      "project_id": "fmd-patho",
+      "title": "Patho-epidemiological Analyses of Foot-and-mouth Disease.",
+      "short_summary": "Studies incorporating FMD genomics, within-host dynamics, or animal experiment results.",
+      "abstract": "This GeoEpi project brings together studies incorporating foot-and-mouth disease genomics, within-host dynamics, or animal experiment results. Registered work includes an agent-based disease transmission model, sequence mapping, incubation-phase transmission, and FMDV co-infection and recombination.",
+      "content_status": "scaffold",
+      "themes": [
+        "epidemiology"
+      ],
+      "keywords": [
+        "foot-and-mouth disease",
+        "genomics",
+        "within-host dynamics",
+        "animal experiments"
+      ],
+      "featured": false,
+      "image": null,
+      "links": [],
+      "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/fmd-patho",
+      "subprojects": [
+        {
+          "subproject_id": "fmd-challengeabm",
+          "title": "challengeABM an Agent-Based Disease Transmission Model",
+          "summary": "",
+          "repository": "geoepi/challengeABM",
+          "repository_url": "https://github.com/geoepi/challengeABM",
+          "status": "paused"
+        },
+        {
+          "subproject_id": "incubation-stenfeldt",
+          "title": "Incubation Phase Transmission of Foot-and-mouth Disease",
+          "summary": "",
+          "repository": "geoepi/fmdv-preclinical",
+          "repository_url": "https://github.com/geoepi/fmdv-preclinical",
+          "status": "complete"
+        },
+        {
+          "subproject_id": "pak-coinfection",
+          "title": "FMDV Co-Infection and Recombination",
+          "summary": "",
+          "repository": "geoepi/pak-coinfection",
+          "repository_url": "https://github.com/geoepi/pak-coinfection",
+          "status": "complete"
+        },
+        {
+          "subproject_id": "sequence-map",
+          "title": "Mapping Virus Diversity and Variation",
+          "summary": "",
+          "repository": "geoepi/sequence-map",
+          "repository_url": "https://github.com/geoepi/sequence-map",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "project_id": "fmd-risk",
+      "title": "Foot-and-mouth Disease Risk Assessments",
+      "short_summary": "Foot-and-mouth spread dynamics, transmission, and simulated response analyses.",
+      "abstract": "This GeoEpi project brings together work on foot-and-mouth disease spread dynamics, transmission, and simulated response analyses. Registered work includes preclinical spread, control-zone design in Sri Lanka, and endemic foot-and-mouth disease analyses for Vietnam.",
+      "content_status": "scaffold",
+      "themes": [
+        "geography",
+        "epidemiology",
+        "modeling"
+      ],
+      "keywords": [
+        "foot-and-mouth disease",
+        "spread dynamics",
+        "transmission",
+        "simulated response"
+      ],
+      "featured": false,
+      "image": null,
+      "links": [],
+      "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/fmd-risk",
+      "subprojects": [
+        {
+          "subproject_id": "fmd-preclinical-spread",
+          "title": "Epidemiologic consequences of preclinical transmission of foot-and-mouth disease virus in cattle",
+          "summary": "",
+          "repository": "geoepi/FMD-preclinical-spread",
+          "repository_url": "https://github.com/geoepi/FMD-preclinical-spread",
+          "status": "complete"
+        },
+        {
+          "subproject_id": "fmd-sri-lanka",
+          "title": "Designing Control Zones for Foot-and-mouth Disease in Sri Lanka",
+          "summary": "",
+          "repository": "geoepi/sri-lanka-fmd",
+          "repository_url": "https://github.com/geoepi/sri-lanka-fmd",
+          "status": "paused"
+        },
+        {
+          "subproject_id": "fmd-vietnam",
+          "title": "Endemic FMD analyses for Vietnam",
+          "summary": "",
+          "repository": "geoepi/fmd-vietnam",
+          "repository_url": "https://github.com/geoepi/fmd-vietnam",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "project_id": "hpai-plume",
+      "title": "Atmospheric Dispersion of HPAI",
+      "short_summary": "Retrospective analysis of atmospheric HPAI transport between poultry facilities.",
+      "abstract": "This GeoEpi project brings together retrospective analysis of atmospheric HPAI transport between poultry facilities. Registered work includes an atmospheric dispersion project, HPAI visualization and analyses, and tools for the Biosecurity Compliance Audit Program.",
+      "content_status": "scaffold",
+      "themes": [
+        "geography",
+        "epidemiology"
+      ],
+      "keywords": [
+        "HPAI",
+        "atmospheric dispersion",
+        "poultry facilities",
+        "transport"
+      ],
+      "featured": false,
+      "image": null,
+      "links": [],
+      "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/hpai-plume",
+      "subprojects": [
+        {
+          "subproject_id": "bcapture",
+          "title": "Extraction and visualization Tools for Biosecurity Compliance Audit Program",
+          "summary": "",
+          "repository": "geoepi/bcapture",
+          "repository_url": "https://github.com/geoepi/bcapture",
+          "status": "active"
+        },
+        {
+          "subproject_id": "epiplume",
+          "title": "Atmospheric Dispersion of HPAI",
+          "summary": "",
+          "repository": "geoepi/EpiPlume",
+          "repository_url": "https://github.com/geoepi/EpiPlume",
+          "status": "active"
+        },
+        {
+          "subproject_id": "hpai-lauren",
+          "title": "HPAI visualization and analyses",
+          "summary": "",
+          "repository": "geoepi/hpai-lauren",
+          "repository_url": "https://github.com/geoepi/hpai-lauren",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "project_id": "nws-risk",
+      "title": "NWS Risk and Operational Decision Assessment",
+      "short_summary": "Build automated tools to assess NWS risk and support APHIS operational decision making.",
+      "abstract": "This GeoEpi project brings together automated tools for NWS risk assessment and support of APHIS operational decision making. Registered work includes geostatistical modeling, cellular automata, data processing, dashboard pipelines, and a group NWS repository.",
+      "content_status": "scaffold",
+      "themes": [
+        "epidemiology",
+        "modeling"
+      ],
+      "keywords": [
+        "NWS risk",
+        "risk assessment",
+        "operational decision making",
+        "automated tools"
+      ],
+      "featured": false,
+      "image": null,
+      "links": [],
+      "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/nws-risk",
+      "subprojects": [
+        {
+          "subproject_id": "nws-bayes-geostat",
+          "title": "Bayesian NWS Geostatistical Model",
+          "summary": "",
+          "repository": "geoepi/hominivorax-geostat",
+          "repository_url": "https://github.com/geoepi/hominivorax-geostat",
+          "status": "active"
+        },
+        {
+          "subproject_id": "nws-ca-env",
+          "title": "NWS Cellular Automata",
+          "summary": "",
+          "repository": "geoepi/hominivorax-CA",
+          "repository_url": "https://github.com/geoepi/hominivorax-CA",
+          "status": "active"
+        },
+        {
+          "subproject_id": "nws-cds-datagrab",
+          "title": "Pipeline for CDS Data Processing",
+          "summary": "",
+          "repository": "geoepi/cds-datagrab",
+          "repository_url": "https://github.com/geoepi/cds-datagrab",
+          "status": "active"
+        },
+        {
+          "subproject_id": "nws-dashboard-pipeline",
+          "title": "Pipeline for NWS Dashboard",
+          "summary": "",
+          "repository": "geoepi/nws-postprocessing",
+          "repository_url": "https://github.com/geoepi/nws-postprocessing",
+          "status": "paused"
+        },
+        {
+          "subproject_id": "nws-nwscrewworm",
+          "title": "Group NWS Repository",
+          "summary": "",
+          "repository": "geoepi/NWScrewworm",
+          "repository_url": "https://github.com/geoepi/NWScrewworm",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "project_id": "vsv-risk",
+      "title": "Vesicular Stomatitis Virus Risk Assessments",
+      "short_summary": "Models and analyses focussed on VSV risks to the United States.",
+      "abstract": "This GeoEpi project brings together models and analyses focused on vesicular stomatitis virus risks to the United States. Registered work includes an SEIR-SEI outbreak model, genome and geography analyses, and a California outbreak project.",
+      "content_status": "scaffold",
+      "themes": [
+        "geography",
+        "epidemiology",
+        "modeling"
+      ],
+      "keywords": [
+        "vesicular stomatitis virus",
+        "risk assessment",
+        "SEIR-SEI",
+        "genomes",
+        "geography"
+      ],
+      "featured": false,
+      "image": null,
+      "links": [],
+      "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/vsv-risk",
+      "subprojects": [
+        {
+          "subproject_id": "seir-vector",
+          "title": "Modeling the 2014-2015 Vesicular Stomatitis Outbreak in the United States using an SEIR-SEI Approach",
+          "summary": "",
+          "repository": "geoepi/seir-vector",
+          "repository_url": "https://github.com/geoepi/seir-vector",
+          "status": "complete"
+        },
+        {
+          "subproject_id": "vs-epizootics",
+          "title": "Interrogating Genomes and Geography to Unravel Multiyear Vesicular Stomatitis Epizootics",
+          "summary": "",
+          "repository": "geoepi/vs-epizootics",
+          "repository_url": "https://github.com/geoepi/vs-epizootics",
+          "status": "complete"
+        },
+        {
+          "subproject_id": "vsv-ca-2023",
+          "title": "California Outbreak 2023",
+          "summary": "",
+          "repository": "geoepi/vsv-2023",
+          "repository_url": "https://github.com/geoepi/vsv-2023",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "project_id": "wnv-risk",
+      "title": "West Nile Virus Risk Assessments for Livestock",
+      "short_summary": "Models and analyses examining WNV risk to U.S. livestock.",
+      "abstract": "This GeoEpi project brings together models and analyses examining West Nile virus risk to U.S. livestock. Registered work includes a graph neural network project and a GeoAI flavivirus sandbox.",
+      "content_status": "scaffold",
+      "themes": [
+        "epidemiology",
+        "modeling"
+      ],
+      "keywords": [
+        "West Nile virus",
+        "livestock",
+        "risk assessment",
+        "graph neural networks",
+        "GeoAI"
+      ],
+      "featured": false,
+      "image": null,
+      "links": [],
+      "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/wnv-risk",
+      "subprojects": [
+        {
+          "subproject_id": "wnv-ai-gnn",
+          "title": "WNV Graph Neural Network in the Southern United States",
+          "summary": "",
+          "repository": "geoepi/SpatioTemporal-GNN-Regressor",
+          "repository_url": "https://github.com/geoepi/SpatioTemporal-GNN-Regressor",
+          "status": "paused"
+        },
+        {
+          "subproject_id": "wnv-geoai-flavi",
+          "title": "GeoAI Flavivirus Sandbox",
+          "summary": "",
+          "repository": "geoepi/GeoAI-Flavivirus",
+          "repository_url": "https://github.com/geoepi/GeoAI-Flavivirus",
+          "status": "paused"
+        }
+      ]
+    }
+  ]
+}

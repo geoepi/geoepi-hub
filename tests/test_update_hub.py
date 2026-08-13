@@ -184,6 +184,21 @@ subprojects:
             (project / "subprojects.yml").write_text(
                 registry or self.REGISTRY, encoding="utf-8"
             )
+            (project / "public.yml").write_text(
+                "schema_version: 1\n"
+                "project_id: hpai-plume\n"
+                "publish: true\n"
+                "content_status: scaffold\n"
+                "title: HPAI Plume\n"
+                "short_summary: A concise summary.\n"
+                "abstract: A short public description.\n"
+                "themes: []\n"
+                "keywords: []\n"
+                "featured: false\n"
+                "image: null\n"
+                "links: []\n",
+                encoding="utf-8",
+            )
             generated = root / "generated"
             generated.mkdir()
             (generated / "sentinel.txt").write_text(

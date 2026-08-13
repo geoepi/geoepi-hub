@@ -1,0 +1,32 @@
+# Optional public project record for the GeoEpi website.
+# This file is separate from .geoepi.yml Version 1.
+schema_version: 1
+
+# Must match the containing projects/<project_id>/ directory.
+project_id: project-id
+
+# Only publish=true records enter generated/public-research.json.
+publish: true
+
+# Use scaffold until a project scientist has reviewed the public wording.
+content_status: scaffold
+
+title: Project title
+short_summary: >
+  One concise public-facing summary.
+abstract: >
+  A short public-facing project description.
+
+# Controlled vocabulary: geography, epidemiology, modeling, ecology.
+themes:
+  - geography
+
+# Use only keywords supported by the project metadata.
+keywords:
+  - example keyword
+
+featured: false
+image: null
+
+# Use public HTTPS links only. The Hub project URL is added automatically.
+links: []

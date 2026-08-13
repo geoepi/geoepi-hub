@@ -1,0 +1,26 @@
+# Public website narrative for this Hub project. See templates/public-project-template.yml.
+schema_version: 1
+project_id: vsv-risk
+publish: true
+content_status: scaffold
+title: Vesicular Stomatitis Virus Risk Assessments
+short_summary: >
+  Models and analyses focussed on VSV risks to the United States.
+abstract: >
+  This GeoEpi project brings together models and analyses focused on vesicular
+  stomatitis virus risks to the United States. Registered work includes an
+  SEIR-SEI outbreak model, genome and geography analyses, and a California
+  outbreak project.
+themes:
+  - geography
+  - epidemiology
+  - modeling
+keywords:
+  - vesicular stomatitis virus
+  - risk assessment
+  - SEIR-SEI
+  - genomes
+  - geography
+featured: false
+image: null
+links: []
