@@ -14,6 +14,7 @@ import yaml
 PUBLIC_SCHEMA_VERSION = 1
 CONTENT_STATUS_VALUES = {"scaffold", "reviewed"}
 THEME_VALUES = {"geography", "epidemiology", "modeling", "ecology"}
+REPOSITORY_VISIBILITY_VALUES = {"public", "private", "internal"}
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 
@@ -127,12 +128,19 @@ def load_public_records(projects_dir=Path("projects")):
 
 def _subproject_record(row):
     repository = row["repository"]
+    repository_visibility = row.get("repository_visibility")
+    if repository_visibility not in REPOSITORY_VISIBILITY_VALUES:
+        raise ValueError(
+            "repository_visibility must be one of: "
+            + ", ".join(sorted(REPOSITORY_VISIBILITY_VALUES))
+        )
     return {
         "subproject_id": row["subproject_id"],
         "title": row["title"].strip(),
         "summary": row["summary"].strip(),
         "repository": repository,
         "repository_url": f"https://github.com/{repository}",
+        "repository_visibility": repository_visibility,
         "status": row["status"],
     }
 

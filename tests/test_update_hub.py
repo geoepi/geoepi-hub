@@ -51,6 +51,7 @@ def row(
         "subproject_id": subproject_id,
         "title": "Example analysis",
         "repository": f"geoepi/{subproject_id}",
+        "repository_visibility": "public",
         "lead_name": "Example Lead",
         "lead_github": "example",
         "status": status,
@@ -105,6 +106,62 @@ class MetadataValidationTests(unittest.TestCase):
             )
         )
         self.assertIn("next_milestone.target must be an ISO date (YYYY-MM-DD)", errors)
+
+
+class RepositoryVisibilityTests(unittest.TestCase):
+    def test_visibility_field_is_preferred(self):
+        self.assertEqual(
+            hub.normalize_repository_visibility({"visibility": "internal", "private": True}),
+            "internal",
+        )
+
+    def test_repository_metadata_uses_repository_api_endpoint(self):
+        with mock.patch.object(hub, "github_get", return_value={"visibility": "private"}) as github_get:
+            self.assertEqual(
+                hub.read_repository_metadata("geoepi/ExampleRepo"),
+                {"visibility": "private"},
+            )
+        github_get.assert_called_once_with("/repos/geoepi/ExampleRepo")
+
+    def test_private_boolean_is_used_as_fallback(self):
+        self.assertEqual(hub.normalize_repository_visibility({"private": True}), "private")
+        self.assertEqual(hub.normalize_repository_visibility({"private": False}), "public")
+        self.assertEqual(
+            hub.normalize_repository_visibility({"visibility": "unknown", "private": False}),
+            "public",
+        )
+
+    def test_unknown_visibility_without_valid_fallback_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "missing or unknown"):
+            hub.normalize_repository_visibility({"visibility": "restricted"})
+
+    def test_collect_rows_reports_metadata_api_failure_without_private_default(self):
+        entries = [{"project_id": "nws-risk", "subproject_id": "nws-example", "repository": "geoepi/ExampleRepo"}]
+        rows, errors = hub.collect_rows(
+            entries,
+            metadata_reader=lambda repo: valid_metadata(),
+            commit_date_reader=lambda repo: TODAY,
+            repository_metadata_reader=lambda repo: (_ for _ in ()).throw(RuntimeError("API down")),
+        )
+        self.assertEqual(rows, [])
+        self.assertTrue(any("cannot determine repository visibility" in error for error in errors))
+        self.assertFalse(any("private" in error.lower() for error in errors))
+
+    def test_collect_rows_reuses_visibility_for_a_repository(self):
+        entries = [
+            {"project_id": "nws-risk", "subproject_id": "nws-example", "repository": "geoepi/ExampleRepo"},
+            {"project_id": "nws-risk", "subproject_id": "nws-example", "repository": "geoepi/ExampleRepo"},
+        ]
+        metadata_calls = []
+        rows, errors = hub.collect_rows(
+            entries,
+            metadata_reader=lambda repo: valid_metadata(subproject_id="nws-example"),
+            commit_date_reader=lambda repo: TODAY,
+            repository_metadata_reader=lambda repo: metadata_calls.append(repo) or {"visibility": "private"},
+        )
+        self.assertEqual(errors, [])
+        self.assertEqual(metadata_calls, ["geoepi/ExampleRepo"])
+        self.assertEqual([item["repository_visibility"] for item in rows], ["private", "private"])
 
 
 class RegistryValidationTests(unittest.TestCase):

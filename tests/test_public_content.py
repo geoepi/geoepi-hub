@@ -39,6 +39,7 @@ def row(project_id, subproject_id, title):
         "title": title,
         "summary": f"Summary for {subproject_id}.",
         "repository": f"geoepi/{subproject_id}",
+        "repository_visibility": "public",
         "status": "active",
         "lead_name": "Private lead",
         "current_focus": "Private operational focus",
@@ -138,8 +139,16 @@ class PublicFeedTests(unittest.TestCase):
         subproject = feed["projects"][0]["subprojects"][0]
         self.assertEqual(subproject["summary"], "Summary for a-subproject.")
         self.assertEqual(subproject["repository_url"], "https://github.com/geoepi/a-subproject")
+        self.assertEqual(subproject["repository_visibility"], "public")
         for field in ("lead_name", "current_focus", "compute", "next_milestone", "metadata_stale"):
             self.assertNotIn(field, subproject)
+
+    def test_unknown_repository_visibility_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "repository_visibility"):
+            public_content.build_public_research_feed(
+                [valid_record()],
+                [row("a-project", "a-subproject", "A subproject") | {"repository_visibility": "unknown"}],
+            )
 
     def test_json_is_deterministic(self):
         records = [valid_record()]

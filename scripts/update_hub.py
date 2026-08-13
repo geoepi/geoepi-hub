@@ -36,6 +36,7 @@ FIELDNAMES = [
     "subproject_id",
     "title",
     "repository",
+    "repository_visibility",
     "lead_name",
     "lead_github",
     "status",
@@ -87,6 +88,32 @@ def read_remote_yaml(repo, path=".geoepi.yml"):
     if not isinstance(data, dict):
         raise RuntimeError("YAML root must be a mapping")
     return data
+
+
+def read_repository_metadata(repo):
+    """Read authenticated repository metadata from the GitHub REST API."""
+    metadata = github_get(f"/repos/{repo}")
+    if not isinstance(metadata, dict):
+        raise RuntimeError("repository metadata must be an object")
+    return metadata
+
+
+def normalize_repository_visibility(metadata):
+    """Normalize GitHub repository metadata to a supported visibility value."""
+    if not isinstance(metadata, dict):
+        raise ValueError("repository metadata must be an object")
+
+    visibility = metadata.get("visibility")
+    if isinstance(visibility, str):
+        normalized = visibility.strip().lower()
+        if normalized in {"public", "private", "internal"}:
+            return normalized
+
+    private = metadata.get("private")
+    if type(private) is bool:
+        return "private" if private else "public"
+
+    raise ValueError("repository visibility is missing or unknown")
 
 
 def metadata_commit_date(repo):
@@ -311,7 +338,14 @@ def load_registries(projects_dir=Path("projects")):
     return entries, errors
 
 
-def build_row(entry, metadata, changed, today=None, stale_days=STALE_DAYS):
+def build_row(
+    entry,
+    metadata,
+    changed,
+    today=None,
+    stale_days=STALE_DAYS,
+    repository_visibility=None,
+):
     today = today or date.today()
     lead = metadata.get("lead") or {}
     compute = metadata.get("compute") or []
@@ -322,6 +356,7 @@ def build_row(entry, metadata, changed, today=None, stale_days=STALE_DAYS):
         "title": metadata.get("title", ""),
         "summary": metadata.get("summary", ""),
         "repository": entry["repository"],
+        "repository_visibility": repository_visibility,
         "lead_name": lead.get("name", ""),
         "lead_github": lead.get("github", ""),
         "status": metadata.get("status", ""),
@@ -337,18 +372,35 @@ def build_row(entry, metadata, changed, today=None, stale_days=STALE_DAYS):
 
 
 def collect_rows(entries, today=None, stale_days=STALE_DAYS, metadata_reader=None,
-                 commit_date_reader=None):
+                 commit_date_reader=None, repository_metadata_reader=None):
     today = today or date.today()
     metadata_reader = metadata_reader or read_remote_yaml
     commit_date_reader = commit_date_reader or metadata_commit_date
+    repository_metadata_reader = repository_metadata_reader or read_repository_metadata
     rows = []
     errors = []
+    visibility_by_repo = {}
+    visibility_errors = {}
 
     for entry in entries:
         project_id = entry["project_id"]
         subproject_id = entry["subproject_id"]
         repo = entry["repository"]
         context = f"{project_id}/{subproject_id} ({repo})"
+        if repo in visibility_errors:
+            errors.append(f"{context}: cannot determine repository visibility: {visibility_errors[repo]}")
+            continue
+        if repo not in visibility_by_repo:
+            try:
+                repository_metadata = repository_metadata_reader(repo)
+                visibility_by_repo[repo] = normalize_repository_visibility(
+                    repository_metadata
+                )
+            except Exception as exc:
+                visibility_errors[repo] = str(exc)
+                errors.append(f"{context}: cannot determine repository visibility: {exc}")
+                continue
+        repository_visibility = visibility_by_repo[repo]
         try:
             metadata = metadata_reader(repo)
         except Exception as exc:
@@ -369,7 +421,16 @@ def collect_rows(entries, today=None, stale_days=STALE_DAYS, metadata_reader=Non
             errors.append(f"{context}: no commit history found for .geoepi.yml")
             continue
 
-        rows.append(build_row(entry, metadata, changed, today, stale_days))
+        rows.append(
+            build_row(
+                entry,
+                metadata,
+                changed,
+                today,
+                stale_days,
+                repository_visibility,
+            )
+        )
 
     rows.sort(key=lambda row: (row["project_id"], row["subproject_id"]))
     return rows, errors
