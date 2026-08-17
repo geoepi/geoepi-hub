@@ -128,7 +128,7 @@
           "summary": "Sequence-map converts aligned viral sequences and sampling geographic coordinates into PCA, DAPC, and other location-level summaries and optional spatial predictions of ordination-axis scores across geographic space.",
           "repository": "geoepi/sequence-map",
           "repository_url": "https://github.com/geoepi/sequence-map",
-          "repository_visibility": "private",
+          "repository_visibility": "public",
           "status": "active"
         }
       ]
@@ -211,7 +211,7 @@
           "summary": "bcapture provides tools for extracting, organizing, validating, summarizing, and viewing data from Biosecurity Compliance Audit Program (bCAP) forms.",
           "repository": "geoepi/bcapture",
           "repository_url": "https://github.com/geoepi/bcapture",
-          "repository_visibility": "private",
+          "repository_visibility": "public",
           "status": "active"
         },
         {
@@ -279,7 +279,7 @@
           "summary": "Automated pipeline for retrieving and preprocessing clinate and environmental rasters from the Climate Data Store (CDS).",
           "repository": "geoepi/cds-datagrab",
           "repository_url": "https://github.com/geoepi/cds-datagrab",
-          "repository_visibility": "private",
+          "repository_visibility": "public",
           "status": "active"
         },
         {
