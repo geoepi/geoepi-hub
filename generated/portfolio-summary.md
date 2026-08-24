@@ -42,7 +42,7 @@
 
 | Project | Subproject | Milestone | Target | Status | Repository |
 |---|---|---|---|---|---|
-| hpai-plume | bcapture | Plot figures | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
+| hpai-plume | bcapture | Develop domain-specific epidemiological analyses using validated feature products | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
 | vsv-risk | vsv-ca-2023 | Add documentmentation to support manuscript submission | 2026-10-01 | active | [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023) |
 
 ## Metadata freshness
