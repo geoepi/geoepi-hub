@@ -57,7 +57,7 @@ Retrospective analysis of atmospheric HPAI transport between poultry facilities.
 - Content status: `scaffold`
 - Published: `true`
 - Themes: epidemiology, modeling
-- Subprojects: 5
+- Subprojects: 6
 - Hub record: https://github.com/geoepi/geoepi-hub/tree/main/projects/nws-risk
 
 Build automated tools to assess NWS risk and support APHIS operational decision making.

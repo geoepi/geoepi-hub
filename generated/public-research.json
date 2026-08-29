@@ -256,6 +256,15 @@
       "hub_url": "https://github.com/geoepi/geoepi-hub/tree/main/projects/nws-risk",
       "subprojects": [
         {
+          "subproject_id": "chime-nws",
+          "title": "Cochliomyia Hominivorax Interpretation and Model Evaluation",
+          "summary": "CHIME is a gpt-oss-120b LLM for integrating New World screwworm (NWS) knowledge, interpreting model outputs, generating adversarial scenarios, and orchestrating computational experiments across linked models and HPC workflows.",
+          "repository": "geoepi/chime-nws",
+          "repository_url": "https://github.com/geoepi/chime-nws",
+          "repository_visibility": "private",
+          "status": "active"
+        },
+        {
           "subproject_id": "nws-bayes-geostat",
           "title": "Bayesian NWS Geostatistical Model",
           "summary": "Joint spatiotemporal modeling of NWS occurrence and intensity.",
