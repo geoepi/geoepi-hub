@@ -238,7 +238,7 @@
       "project_id": "nws-risk",
       "title": "NWS Risk and Operational Decision Assessment",
       "short_summary": "Build automated tools to assess NWS risk and support APHIS operational decision making.",
-      "abstract": "This GeoEpi project brings together automated tools for NWS risk assessment and support of APHIS operational decision making. Registered work includes geostatistical modeling, cellular automata, data processing, dashboard pipelines, and a group NWS repository.",
+      "abstract": "This GeoEpi project brings together automated tools for NWS risk assessment and support of APHIS operational decision making. Registered work includes geostatistical modeling, cellular automata, data processing, dashboard pipelines, custom LLM, and a group NWS repository.",
       "content_status": "scaffold",
       "themes": [
         "epidemiology",
