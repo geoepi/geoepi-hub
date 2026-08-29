@@ -10,7 +10,7 @@ abstract: >
   This GeoEpi project brings together automated tools for NWS risk assessment
   and support of APHIS operational decision making. Registered work includes
   geostatistical modeling, cellular automata, data processing, dashboard
-  pipelines, and a group NWS repository.
+  pipelines, custom LLM, and a group NWS repository.
 themes:
   - epidemiology
   - modeling
