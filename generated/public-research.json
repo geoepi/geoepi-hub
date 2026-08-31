@@ -308,6 +308,15 @@
           "repository_url": "https://github.com/geoepi/NWScrewworm",
           "repository_visibility": "private",
           "status": "active"
+        },
+        {
+          "subproject_id": "traverse",
+          "title": "Landscape connectivity passage model",
+          "summary": "A general-purpose R package for constructing and analyzing landscape conductance, resistance, passage, and connectivity surfaces.",
+          "repository": "geoepi/traverse",
+          "repository_url": "https://github.com/geoepi/traverse",
+          "repository_visibility": "private",
+          "status": "active"
         }
       ]
     },

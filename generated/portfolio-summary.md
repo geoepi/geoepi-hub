@@ -6,9 +6,9 @@
 ## Portfolio totals
 
 - Projects represented: 8
-- Registered subprojects: 24
+- Registered subprojects: 25
 - Planned: 0
-- Active: 11
+- Active: 12
 - Paused: 7
 - Complete: 5
 - Archived: 1
@@ -22,7 +22,7 @@
 | fmd-patho | 0 | 1 | 1 | 2 | 0 | 4 |
 | fmd-risk | 0 | 1 | 1 | 1 | 0 | 3 |
 | hpai-plume | 0 | 3 | 0 | 0 | 0 | 3 |
-| nws-risk | 0 | 5 | 1 | 0 | 0 | 6 |
+| nws-risk | 0 | 6 | 1 | 0 | 0 | 7 |
 | vsv-risk | 0 | 1 | 0 | 2 | 0 | 3 |
 | wnv-risk | 0 | 0 | 2 | 0 | 0 | 2 |
 
@@ -38,6 +38,7 @@
 | nws-risk | nws-cds-datagrab | Add additional variables | 2026-09-01 | active | [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab) |
 | nws-risk | nws-dashboard-pipeline | Pending dashboard redesign | 2026-09-01 | paused | [geoepi/nws-postprocessing](https://github.com/geoepi/nws-postprocessing) |
 | nws-risk | chime-nws | Knowledge transfer | 2026-09-04 | active | [geoepi/chime-nws](https://github.com/geoepi/chime-nws) |
+| nws-risk | traverse | Testing | 2026-09-04 | active | [geoepi/traverse](https://github.com/geoepi/traverse) |
 
 ### 31-60 days
 
