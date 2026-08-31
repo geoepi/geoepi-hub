@@ -19,3 +19,6 @@ subprojects:
     
   - subproject_id: nws-dashboard-pipeline
     repository: geoepi/nws-postprocessing
+
+  - subproject_id: traverse
+    repository: geoepi/traverse
