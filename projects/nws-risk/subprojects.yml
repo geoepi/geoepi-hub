@@ -22,3 +22,6 @@ subprojects:
 
   - subproject_id: traverse
     repository: geoepi/traverse
+
+  - subproject_id: nws-surveillance-design
+    repository: geoepi/NWS_sampling
