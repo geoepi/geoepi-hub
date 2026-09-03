@@ -310,12 +310,21 @@
           "status": "active"
         },
         {
+          "subproject_id": "nws-surveillance-design",
+          "title": "Trap-based surveillance design for NWS",
+          "summary": "A flexible, robust spatially balanced sampling design for NWS trapping in the southern U.S.",
+          "repository": "geoepi/NWS_sampling",
+          "repository_url": "https://github.com/geoepi/NWS_sampling",
+          "repository_visibility": "private",
+          "status": "active"
+        },
+        {
           "subproject_id": "traverse",
           "title": "Landscape connectivity passage model",
           "summary": "A general-purpose R package for constructing and analyzing landscape conductance, resistance, passage, and connectivity surfaces.",
           "repository": "geoepi/traverse",
           "repository_url": "https://github.com/geoepi/traverse",
-          "repository_visibility": "private",
+          "repository_visibility": "public",
           "status": "active"
         }
       ]

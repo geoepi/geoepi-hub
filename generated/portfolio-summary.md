@@ -6,9 +6,9 @@
 ## Portfolio totals
 
 - Projects represented: 8
-- Registered subprojects: 25
+- Registered subprojects: 26
 - Planned: 0
-- Active: 12
+- Active: 13
 - Paused: 7
 - Complete: 5
 - Archived: 1
@@ -22,7 +22,7 @@
 | fmd-patho | 0 | 1 | 1 | 2 | 0 | 4 |
 | fmd-risk | 0 | 1 | 1 | 1 | 0 | 3 |
 | hpai-plume | 0 | 3 | 0 | 0 | 0 | 3 |
-| nws-risk | 0 | 6 | 1 | 0 | 0 | 7 |
+| nws-risk | 0 | 7 | 1 | 0 | 0 | 8 |
 | vsv-risk | 0 | 1 | 0 | 2 | 0 | 3 |
 | wnv-risk | 0 | 0 | 2 | 0 | 0 | 2 |
 
@@ -32,20 +32,19 @@
 
 | Project | Subproject | Milestone | Target | Status | Repository |
 |---|---|---|---|---|---|
-| fmd-patho | sequence-map | Estimation of allele diversity | 2026-09-01 | active | [geoepi/sequence-map](https://github.com/geoepi/sequence-map) |
-| hpai-plume | epiplume | Parallel processing workflow | 2026-09-01 | active | [geoepi/EpiPlume](https://github.com/geoepi/EpiPlume) |
-| nws-risk | nws-bayes-geostat | Update all inputs | 2026-09-01 | active | [geoepi/hominivorax-geostat](https://github.com/geoepi/hominivorax-geostat) |
-| nws-risk | nws-cds-datagrab | Add additional variables | 2026-09-01 | active | [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab) |
-| nws-risk | nws-dashboard-pipeline | Pending dashboard redesign | 2026-09-01 | paused | [geoepi/nws-postprocessing](https://github.com/geoepi/nws-postprocessing) |
 | nws-risk | chime-nws | Knowledge transfer | 2026-09-04 | active | [geoepi/chime-nws](https://github.com/geoepi/chime-nws) |
 | nws-risk | traverse | Testing | 2026-09-04 | active | [geoepi/traverse](https://github.com/geoepi/traverse) |
+| nws-risk | nws-surveillance-design | Share proposal with APHIS | 2026-09-15 | active | [geoepi/NWS_sampling](https://github.com/geoepi/NWS_sampling) |
+| hpai-plume | bcapture | Develop domain-specific epidemiological analyses using validated feature products | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
+| vsv-risk | vsv-ca-2023 | Add documentmentation to support manuscript submission | 2026-10-01 | active | [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023) |
 
 ### 31-60 days
 
 | Project | Subproject | Milestone | Target | Status | Repository |
 |---|---|---|---|---|---|
-| hpai-plume | bcapture | Develop domain-specific epidemiological analyses using validated feature products | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
-| vsv-risk | vsv-ca-2023 | Add documentmentation to support manuscript submission | 2026-10-01 | active | [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023) |
+| fmd-risk | fmd-vietnam | Manuscript drafting | 2026-11-01 | active | [geoepi/fmd-vietnam](https://github.com/geoepi/fmd-vietnam) |
+| hpai-plume | hpai-lauren | Planning | 2026-11-01 | active | [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren) |
+| nws-risk | nws-nwscrewworm | Reorganize repo | 2026-11-01 | active | [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm) |
 
 ## Metadata freshness
 
