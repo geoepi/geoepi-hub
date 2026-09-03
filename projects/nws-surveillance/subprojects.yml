@@ -1,6 +1,0 @@
-# registry locates canonical repositories
-project_id: nws-surveillance
-
-subprojects:
-  - subproject_id: nws-surveillance-design
-    repository: geoepi/NWS_sampling
