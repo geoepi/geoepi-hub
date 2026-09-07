@@ -11,6 +11,8 @@
 | hpai-plume | epiplume | Parallel processing workflow | 2026-09-01 | active | [geoepi/EpiPlume](https://github.com/geoepi/EpiPlume) |
 | nws-risk | nws-bayes-geostat | Update all inputs | 2026-09-01 | active | [geoepi/hominivorax-geostat](https://github.com/geoepi/hominivorax-geostat) |
 | nws-risk | nws-cds-datagrab | Add additional variables | 2026-09-01 | active | [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab) |
+| nws-risk | chime-nws | Knowledge transfer | 2026-09-04 | active | [geoepi/chime-nws](https://github.com/geoepi/chime-nws) |
+| nws-risk | traverse | Testing | 2026-09-04 | active | [geoepi/traverse](https://github.com/geoepi/traverse) |
 
 ## Paused work with review dates passed
 
