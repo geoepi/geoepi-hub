@@ -13,6 +13,7 @@
 | nws-risk | nws-cds-datagrab | Add additional variables | 2026-09-01 | active | [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab) |
 | nws-risk | chime-nws | Knowledge transfer | 2026-09-04 | active | [geoepi/chime-nws](https://github.com/geoepi/chime-nws) |
 | nws-risk | traverse | Testing | 2026-09-04 | active | [geoepi/traverse](https://github.com/geoepi/traverse) |
+| nws-risk | nws-surveillance-design | Share proposal with APHIS | 2026-09-15 | active | [geoepi/NWS_sampling](https://github.com/geoepi/NWS_sampling) |
 
 ## Paused work with review dates passed
 
