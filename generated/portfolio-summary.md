@@ -47,4 +47,27 @@
 
 Metadata are considered stale after 45 days without a change.
 
-Stale metadata records: 0
+Stale metadata records: 22
+
+- asf-risk/asf-gbrts: [geoepi/ASF-GBRTs](https://github.com/geoepi/ASF-GBRTs)
+- asf-swine/asf-swine-contacts: [geoepi/swine-contacts](https://github.com/geoepi/swine-contacts)
+- asf-swine/asf-swine-missouri: [geoepi/FeralSwine_Ben](https://github.com/geoepi/FeralSwine_Ben)
+- fmd-patho/fmd-challengeabm: [geoepi/challengeABM](https://github.com/geoepi/challengeABM)
+- fmd-patho/incubation-stenfeldt: [geoepi/fmdv-preclinical](https://github.com/geoepi/fmdv-preclinical)
+- fmd-patho/pak-coinfection: [geoepi/pak-coinfection](https://github.com/geoepi/pak-coinfection)
+- fmd-patho/sequence-map: [geoepi/sequence-map](https://github.com/geoepi/sequence-map)
+- fmd-risk/fmd-preclinical-spread: [geoepi/FMD-preclinical-spread](https://github.com/geoepi/FMD-preclinical-spread)
+- fmd-risk/fmd-sri-lanka: [geoepi/sri-lanka-fmd](https://github.com/geoepi/sri-lanka-fmd)
+- fmd-risk/fmd-vietnam: [geoepi/fmd-vietnam](https://github.com/geoepi/fmd-vietnam)
+- hpai-plume/epiplume: [geoepi/EpiPlume](https://github.com/geoepi/EpiPlume)
+- hpai-plume/hpai-lauren: [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren)
+- nws-risk/nws-bayes-geostat: [geoepi/hominivorax-geostat](https://github.com/geoepi/hominivorax-geostat)
+- nws-risk/nws-ca-env: [geoepi/hominivorax-CA](https://github.com/geoepi/hominivorax-CA)
+- nws-risk/nws-cds-datagrab: [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab)
+- nws-risk/nws-dashboard-pipeline: [geoepi/nws-postprocessing](https://github.com/geoepi/nws-postprocessing)
+- nws-risk/nws-nwscrewworm: [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm)
+- vsv-risk/seir-vector: [geoepi/seir-vector](https://github.com/geoepi/seir-vector)
+- vsv-risk/vs-epizootics: [geoepi/vs-epizootics](https://github.com/geoepi/vs-epizootics)
+- vsv-risk/vsv-ca-2023: [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023)
+- wnv-risk/wnv-ai-gnn: [geoepi/SpatioTemporal-GNN-Regressor](https://github.com/geoepi/SpatioTemporal-GNN-Regressor)
+- wnv-risk/wnv-geoai-flavi: [geoepi/GeoAI-Flavivirus](https://github.com/geoepi/GeoAI-Flavivirus)
