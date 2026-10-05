@@ -14,6 +14,8 @@
 | nws-risk | chime-nws | Knowledge transfer | 2026-09-04 | active | [geoepi/chime-nws](https://github.com/geoepi/chime-nws) |
 | nws-risk | traverse | Testing | 2026-09-04 | active | [geoepi/traverse](https://github.com/geoepi/traverse) |
 | nws-risk | nws-surveillance-design | Share proposal with APHIS | 2026-09-15 | active | [geoepi/NWS_sampling](https://github.com/geoepi/NWS_sampling) |
+| hpai-plume | bcapture | Develop domain-specific epidemiological analyses using validated feature products | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
+| vsv-risk | vsv-ca-2023 | Add documentmentation to support manuscript submission | 2026-10-01 | active | [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023) |
 
 ## Paused work with review dates passed
 
@@ -41,6 +43,7 @@ Metadata are considered stale after 45 days without a change.
 - fmd-risk/fmd-preclinical-spread: last changed 2026-08-09; [geoepi/FMD-preclinical-spread](https://github.com/geoepi/FMD-preclinical-spread)
 - fmd-risk/fmd-sri-lanka: last changed 2026-08-09; [geoepi/sri-lanka-fmd](https://github.com/geoepi/sri-lanka-fmd)
 - fmd-risk/fmd-vietnam: last changed 2026-08-09; [geoepi/fmd-vietnam](https://github.com/geoepi/fmd-vietnam)
+- hpai-plume/bcapture: last changed 2026-08-20; [geoepi/bcapture](https://github.com/geoepi/bcapture)
 - hpai-plume/epiplume: last changed 2026-08-09; [geoepi/EpiPlume](https://github.com/geoepi/EpiPlume)
 - hpai-plume/hpai-lauren: last changed 2026-08-10; [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren)
 - nws-risk/nws-bayes-geostat: last changed 2026-08-08; [geoepi/hominivorax-geostat](https://github.com/geoepi/hominivorax-geostat)

@@ -32,22 +32,21 @@
 
 | Project | Subproject | Milestone | Target | Status | Repository |
 |---|---|---|---|---|---|
-| hpai-plume | bcapture | Develop domain-specific epidemiological analyses using validated feature products | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
-| vsv-risk | vsv-ca-2023 | Add documentmentation to support manuscript submission | 2026-10-01 | active | [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023) |
+| fmd-risk | fmd-vietnam | Manuscript drafting | 2026-11-01 | active | [geoepi/fmd-vietnam](https://github.com/geoepi/fmd-vietnam) |
+| hpai-plume | hpai-lauren | Planning | 2026-11-01 | active | [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren) |
+| nws-risk | nws-nwscrewworm | Reorganize repo | 2026-11-01 | active | [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm) |
 
 ### 31-60 days
 
 | Project | Subproject | Milestone | Target | Status | Repository |
 |---|---|---|---|---|---|
-| fmd-risk | fmd-vietnam | Manuscript drafting | 2026-11-01 | active | [geoepi/fmd-vietnam](https://github.com/geoepi/fmd-vietnam) |
-| hpai-plume | hpai-lauren | Planning | 2026-11-01 | active | [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren) |
-| nws-risk | nws-nwscrewworm | Reorganize repo | 2026-11-01 | active | [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm) |
+| nws-risk | nws-ca-env | Refactor as package | 2026-12-01 | active | [geoepi/hominivorax-CA](https://github.com/geoepi/hominivorax-CA) |
 
 ## Metadata freshness
 
 Metadata are considered stale after 45 days without a change.
 
-Stale metadata records: 22
+Stale metadata records: 23
 
 - asf-risk/asf-gbrts: [geoepi/ASF-GBRTs](https://github.com/geoepi/ASF-GBRTs)
 - asf-swine/asf-swine-contacts: [geoepi/swine-contacts](https://github.com/geoepi/swine-contacts)
@@ -59,6 +58,7 @@ Stale metadata records: 22
 - fmd-risk/fmd-preclinical-spread: [geoepi/FMD-preclinical-spread](https://github.com/geoepi/FMD-preclinical-spread)
 - fmd-risk/fmd-sri-lanka: [geoepi/sri-lanka-fmd](https://github.com/geoepi/sri-lanka-fmd)
 - fmd-risk/fmd-vietnam: [geoepi/fmd-vietnam](https://github.com/geoepi/fmd-vietnam)
+- hpai-plume/bcapture: [geoepi/bcapture](https://github.com/geoepi/bcapture)
 - hpai-plume/epiplume: [geoepi/EpiPlume](https://github.com/geoepi/EpiPlume)
 - hpai-plume/hpai-lauren: [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren)
 - nws-risk/nws-bayes-geostat: [geoepi/hominivorax-geostat](https://github.com/geoepi/hominivorax-geostat)
