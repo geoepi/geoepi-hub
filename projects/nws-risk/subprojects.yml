@@ -25,3 +25,6 @@ subprojects:
 
   - subproject_id: nws-surveillance-design
     repository: geoepi/NWS_sampling
+
+  - subproject_id: nws-stat-ml
+    repository: geoepi/hominivorax-ml
