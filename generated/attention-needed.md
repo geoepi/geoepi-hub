@@ -14,7 +14,7 @@
 | nws-risk | chime-nws | Knowledge transfer | 2026-09-04 | active | [geoepi/chime-nws](https://github.com/geoepi/chime-nws) |
 | nws-risk | traverse | Testing | 2026-09-04 | active | [geoepi/traverse](https://github.com/geoepi/traverse) |
 | nws-risk | nws-surveillance-design | Share proposal with APHIS | 2026-09-15 | active | [geoepi/NWS_sampling](https://github.com/geoepi/NWS_sampling) |
-| hpai-plume | bcapture | Develop domain-specific epidemiological analyses using validated feature products | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
+| hpai-plume | bcapture | Define outcomes and the contract for inferential epidemiological analysis | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
 | vsv-risk | vsv-ca-2023 | Add documentmentation to support manuscript submission | 2026-10-01 | active | [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023) |
 
 ## Paused work with review dates passed

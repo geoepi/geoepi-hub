@@ -310,6 +310,15 @@
           "status": "active"
         },
         {
+          "subproject_id": "nws-stat-ml",
+          "title": "Statistical Machine-learning",
+          "summary": "Statistical machine-learning workflow for weekly spatial prediction of recorded Cochliomyia hominivorax detections.",
+          "repository": "geoepi/hominivorax-ml",
+          "repository_url": "https://github.com/geoepi/hominivorax-ml",
+          "repository_visibility": "public",
+          "status": "active"
+        },
+        {
           "subproject_id": "nws-surveillance-design",
           "title": "Trap-based surveillance design for NWS",
           "summary": "A flexible, robust spatially balanced sampling design for NWS trapping in the southern U.S.",

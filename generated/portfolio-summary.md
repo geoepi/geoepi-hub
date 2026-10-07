@@ -6,9 +6,9 @@
 ## Portfolio totals
 
 - Projects represented: 8
-- Registered subprojects: 26
+- Registered subprojects: 27
 - Planned: 0
-- Active: 13
+- Active: 14
 - Paused: 7
 - Complete: 5
 - Archived: 1
@@ -22,7 +22,7 @@
 | fmd-patho | 0 | 1 | 1 | 2 | 0 | 4 |
 | fmd-risk | 0 | 1 | 1 | 1 | 0 | 3 |
 | hpai-plume | 0 | 3 | 0 | 0 | 0 | 3 |
-| nws-risk | 0 | 7 | 1 | 0 | 0 | 8 |
+| nws-risk | 0 | 8 | 1 | 0 | 0 | 9 |
 | vsv-risk | 0 | 1 | 0 | 2 | 0 | 3 |
 | wnv-risk | 0 | 0 | 2 | 0 | 0 | 2 |
 
@@ -41,6 +41,7 @@
 | Project | Subproject | Milestone | Target | Status | Repository |
 |---|---|---|---|---|---|
 | nws-risk | nws-ca-env | Refactor as package | 2026-12-01 | active | [geoepi/hominivorax-CA](https://github.com/geoepi/hominivorax-CA) |
+| nws-risk | nws-stat-ml | Full validation | 2026-12-01 | active | [geoepi/hominivorax-ml](https://github.com/geoepi/hominivorax-ml) |
 
 ## Metadata freshness
 
