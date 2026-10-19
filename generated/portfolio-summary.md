@@ -47,7 +47,7 @@
 
 Metadata are considered stale after 45 days without a change.
 
-Stale metadata records: 23
+Stale metadata records: 26
 
 - asf-risk/asf-gbrts: [geoepi/ASF-GBRTs](https://github.com/geoepi/ASF-GBRTs)
 - asf-swine/asf-swine-contacts: [geoepi/swine-contacts](https://github.com/geoepi/swine-contacts)
@@ -62,11 +62,14 @@ Stale metadata records: 23
 - hpai-plume/bcapture: [geoepi/bcapture](https://github.com/geoepi/bcapture)
 - hpai-plume/epiplume: [geoepi/EpiPlume](https://github.com/geoepi/EpiPlume)
 - hpai-plume/hpai-lauren: [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren)
+- nws-risk/chime-nws: [geoepi/chime-nws](https://github.com/geoepi/chime-nws)
 - nws-risk/nws-bayes-geostat: [geoepi/hominivorax-geostat](https://github.com/geoepi/hominivorax-geostat)
 - nws-risk/nws-ca-env: [geoepi/hominivorax-CA](https://github.com/geoepi/hominivorax-CA)
 - nws-risk/nws-cds-datagrab: [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab)
 - nws-risk/nws-dashboard-pipeline: [geoepi/nws-postprocessing](https://github.com/geoepi/nws-postprocessing)
 - nws-risk/nws-nwscrewworm: [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm)
+- nws-risk/nws-surveillance-design: [geoepi/NWS_sampling](https://github.com/geoepi/NWS_sampling)
+- nws-risk/traverse: [geoepi/traverse](https://github.com/geoepi/traverse)
 - vsv-risk/seir-vector: [geoepi/seir-vector](https://github.com/geoepi/seir-vector)
 - vsv-risk/vs-epizootics: [geoepi/vs-epizootics](https://github.com/geoepi/vs-epizootics)
 - vsv-risk/vsv-ca-2023: [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023)
