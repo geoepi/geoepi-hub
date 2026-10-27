@@ -310,6 +310,15 @@
           "status": "active"
         },
         {
+          "subproject_id": "nws-sit-flights",
+          "title": "NWS SIT Flight Review and Processing",
+          "summary": "Human-reviewed processing of New World Screwworm sterile-insect-technique flight trajectories into provenance-preserving release-area review products and canonical 25-km flight-length rasters.",
+          "repository": "geoepi/nws-sit-flights",
+          "repository_url": "https://github.com/geoepi/nws-sit-flights",
+          "repository_visibility": "private",
+          "status": "active"
+        },
+        {
           "subproject_id": "nws-stat-ml",
           "title": "Statistical Machine-learning",
           "summary": "Statistical machine-learning workflow for weekly spatial prediction of recorded Cochliomyia hominivorax detections.",

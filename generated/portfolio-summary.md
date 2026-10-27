@@ -6,9 +6,9 @@
 ## Portfolio totals
 
 - Projects represented: 8
-- Registered subprojects: 27
+- Registered subprojects: 28
 - Planned: 0
-- Active: 14
+- Active: 15
 - Paused: 7
 - Complete: 5
 - Archived: 1
@@ -22,7 +22,7 @@
 | fmd-patho | 0 | 1 | 1 | 2 | 0 | 4 |
 | fmd-risk | 0 | 1 | 1 | 1 | 0 | 3 |
 | hpai-plume | 0 | 3 | 0 | 0 | 0 | 3 |
-| nws-risk | 0 | 8 | 1 | 0 | 0 | 9 |
+| nws-risk | 0 | 9 | 1 | 0 | 0 | 10 |
 | vsv-risk | 0 | 1 | 0 | 2 | 0 | 3 |
 | wnv-risk | 0 | 0 | 2 | 0 | 0 | 2 |
 
