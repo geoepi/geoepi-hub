@@ -28,3 +28,6 @@ subprojects:
 
   - subproject_id: nws-stat-ml
     repository: geoepi/hominivorax-ml
+
+  - subproject_id: nws-sit-flights
+    repository: geoepi/nws-sit-flights
