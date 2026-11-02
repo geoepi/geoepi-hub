@@ -16,6 +16,9 @@
 | nws-risk | nws-surveillance-design | Share proposal with APHIS | 2026-09-15 | active | [geoepi/NWS_sampling](https://github.com/geoepi/NWS_sampling) |
 | hpai-plume | bcapture | Define outcomes and the contract for inferential epidemiological analysis | 2026-10-01 | active | [geoepi/bcapture](https://github.com/geoepi/bcapture) |
 | vsv-risk | vsv-ca-2023 | Add documentmentation to support manuscript submission | 2026-10-01 | active | [geoepi/vsv-2023](https://github.com/geoepi/vsv-2023) |
+| fmd-risk | fmd-vietnam | Manuscript drafting | 2026-11-01 | active | [geoepi/fmd-vietnam](https://github.com/geoepi/fmd-vietnam) |
+| hpai-plume | hpai-lauren | Planning | 2026-11-01 | active | [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren) |
+| nws-risk | nws-nwscrewworm | Reorganize repo | 2026-11-01 | active | [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm) |
 
 ## Paused work with review dates passed
 

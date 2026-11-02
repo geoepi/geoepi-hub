@@ -32,16 +32,15 @@
 
 | Project | Subproject | Milestone | Target | Status | Repository |
 |---|---|---|---|---|---|
-| fmd-risk | fmd-vietnam | Manuscript drafting | 2026-11-01 | active | [geoepi/fmd-vietnam](https://github.com/geoepi/fmd-vietnam) |
-| hpai-plume | hpai-lauren | Planning | 2026-11-01 | active | [geoepi/hpai-lauren](https://github.com/geoepi/hpai-lauren) |
-| nws-risk | nws-nwscrewworm | Reorganize repo | 2026-11-01 | active | [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm) |
+| nws-risk | nws-ca-env | Refactor as package | 2026-12-01 | active | [geoepi/hominivorax-CA](https://github.com/geoepi/hominivorax-CA) |
+| nws-risk | nws-stat-ml | Full validation | 2026-12-01 | active | [geoepi/hominivorax-ml](https://github.com/geoepi/hominivorax-ml) |
 
 ### 31-60 days
 
 | Project | Subproject | Milestone | Target | Status | Repository |
 |---|---|---|---|---|---|
-| nws-risk | nws-ca-env | Refactor as package | 2026-12-01 | active | [geoepi/hominivorax-CA](https://github.com/geoepi/hominivorax-CA) |
-| nws-risk | nws-stat-ml | Full validation | 2026-12-01 | active | [geoepi/hominivorax-ml](https://github.com/geoepi/hominivorax-ml) |
+| asf-swine | asf-swine-contacts | Awaiting reassignment or rescue | 2027-01-01 | paused | [geoepi/swine-contacts](https://github.com/geoepi/swine-contacts) |
+| fmd-patho | fmd-challengeabm | Expand to other pathogens | 2027-01-01 | paused | [geoepi/challengeABM](https://github.com/geoepi/challengeABM) |
 
 ## Metadata freshness
 
