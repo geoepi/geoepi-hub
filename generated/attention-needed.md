@@ -55,6 +55,7 @@ Metadata are considered stale after 45 days without a change.
 - nws-risk/nws-cds-datagrab: last changed 2026-08-08; [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab)
 - nws-risk/nws-dashboard-pipeline: last changed 2026-08-09; [geoepi/nws-postprocessing](https://github.com/geoepi/nws-postprocessing)
 - nws-risk/nws-nwscrewworm: last changed 2026-08-09; [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm)
+- nws-risk/nws-stat-ml: last changed 2026-10-07; [geoepi/hominivorax-ml](https://github.com/geoepi/hominivorax-ml)
 - nws-risk/nws-surveillance-design: last changed 2026-09-03; [geoepi/NWS_sampling](https://github.com/geoepi/NWS_sampling)
 - nws-risk/traverse: last changed 2026-08-31; [geoepi/traverse](https://github.com/geoepi/traverse)
 - vsv-risk/seir-vector: last changed 2026-08-09; [geoepi/seir-vector](https://github.com/geoepi/seir-vector)

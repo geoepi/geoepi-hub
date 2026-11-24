@@ -46,7 +46,7 @@
 
 Metadata are considered stale after 45 days without a change.
 
-Stale metadata records: 26
+Stale metadata records: 27
 
 - asf-risk/asf-gbrts: [geoepi/ASF-GBRTs](https://github.com/geoepi/ASF-GBRTs)
 - asf-swine/asf-swine-contacts: [geoepi/swine-contacts](https://github.com/geoepi/swine-contacts)
@@ -67,6 +67,7 @@ Stale metadata records: 26
 - nws-risk/nws-cds-datagrab: [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab)
 - nws-risk/nws-dashboard-pipeline: [geoepi/nws-postprocessing](https://github.com/geoepi/nws-postprocessing)
 - nws-risk/nws-nwscrewworm: [geoepi/NWScrewworm](https://github.com/geoepi/NWScrewworm)
+- nws-risk/nws-stat-ml: [geoepi/hominivorax-ml](https://github.com/geoepi/hominivorax-ml)
 - nws-risk/nws-surveillance-design: [geoepi/NWS_sampling](https://github.com/geoepi/NWS_sampling)
 - nws-risk/traverse: [geoepi/traverse](https://github.com/geoepi/traverse)
 - vsv-risk/seir-vector: [geoepi/seir-vector](https://github.com/geoepi/seir-vector)
